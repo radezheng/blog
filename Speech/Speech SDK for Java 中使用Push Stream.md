@@ -1,10 +1,11 @@
 
-Speech SDK for Java 中使用 Push Stream
+#**Speech SDK for Java 中使用 Push Stream**
 
 Azure在2018年发布了新版本的语音服务(Speech Service), 可以在单个 Azure 订阅中整合了语音转文本(STT)、文本转语音(TTS)以及语音翻译(Speech Translator)功能, 所支持的语言列表可以参考官方文档: https://docs.microsoft.com/zh-cn/azure/cognitive-services/speech-service/language-support。 使用语音 SDK、语音设备 SDK 或 REST API 可以轻松在应用程序、工具和设备中启用语音，并支持多种开发语言，参考:https://docs.microsoft.com/zh-cn/azure/cognitive-services/speech-service/speech-sdk 。 到9021年11月，Speech SDK也发布到了1.8的版本。今天我们来探讨一下如何用Java来使用Azure Speech SDK.
 
-首先，官方的例子在这里 https://github.com/Azure-Samples/cognitive-services-speech-sdk/tree/master/samples/java/jre/console , 下载到本地后, 可以直接运行:
-[Run0.png]
+首先，官方的例子在这里 https://github.com/Azure-Samples/cognitive-services-speech-sdk/tree/master/samples/java/jre/console , 下载到本地后, 可以直接运行:<br/>
+![./Run0.png]运行效果 <br/>
+
 可以看到，这个例子涵盖了使用语音服务的各种场景，包括：
 --语音识别(STT)从麦克风，文件，语音流等等，
 --语音翻译
