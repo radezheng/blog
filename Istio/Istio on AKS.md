@@ -52,7 +52,7 @@ az aks browse -n $AKSNAME -g $RGName
 ```
 
 确认集群创建成功如:
-```
+```console
 $ kubectl get nodes
 NAME                                STATUS   ROLES   AGE   VERSION
 aks-nodepool1-36276633-vmss000000   Ready    agent   22h   v1.14.8
@@ -124,18 +124,20 @@ EOF
 
 * 通过yaml来安装istio
     Istio自带安装脚本，里面有几个安装模版，每个模版含不同的组件，见下图:
-    ![Istio Profile](./images/IstioProfile.png)
+    ![Istio Profile](./images/IstioProfile.png) <br/>
     如果想安装demo的模版，可以通过下面命令:
 ```shell
 istioctl manifest apply --set profile=demo
 ```
-    也可以创建istio安装yaml文件，来自定义安装组件，见: ![istio.aks.yaml](./istio.aks.yaml)
-    安装命令如下，在安装介质目录外面运行:
+<br/>
+也可以创建istio安装yaml文件，来自定义安装组件，见: ![istio.aks.yaml](./istio.aks.yaml)
+安装命令如下，在安装介质目录外面运行:
+
 ```shell
 istioctl manifest apply -f istio.aks.yaml --logtostderr --set installPackagePath=./istio-1.4.3/install/kubernetes/operator/charts
 ```
-    安装完成如下图:
-    ![Istio install done](./images/istioInstallDone.png)
+安装完成如下图:
+![Istio install done](./images/istioInstallDone.png)
 
 * 确认安装成功
 ```shell
@@ -155,4 +157,7 @@ istioctl dashboard jaeger
 istioctl dashboard kiali
 ```
 
-至此，安装完成。几分钟就有一个可用的Istio环境了，接下来可以把精力主要放在如何开发或运维上面。希望大家都可以成为中国机长。
+至此，安装完成。几分钟就有一个可用的Istio环境了，接下来可以把精力主要放在如何开发或运维上面。出于学习的目的，大家也可以尝试部署Istio官方例子Bookinfo App, 具体参考: https://istio.io/docs/examples/bookinfo/
+![Bookinfo](./images/withistio.svg) <br/>
+希望大家都可以成为中国机长。
+
