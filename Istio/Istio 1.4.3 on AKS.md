@@ -12,7 +12,7 @@
 * __Galley__ 负责配置的验证，导入，处理和分发，它为其他Istio组件屏蔽了底层平台(如Kubernetes)的差异。<br/>
 参考: https://istio.io/docs/ops/deployment/architecture/
 
-1. 创建AKS集群 <br/>
+1. __创建AKS集群__ <br/>
 可以参考以下命令，需要注意的是, __Istio安装时默认Pilot Pod需要比较大的内存(2G * 2 pods)，建议不要选4G或以下的虚机。__
 ```shell
 #全局变量 按需要修改
@@ -58,8 +58,8 @@ NAME                                STATUS   ROLES   AGE   VERSION
 aks-nodepool1-36276633-vmss000000   Ready    agent   22h   v1.14.8
 aks-nodepool1-36276633-vmss000001   Ready    agent   22h   v1.14.8
 ```
-2. 安装Istio
-    * 先要准备环境, 在操作的客户端机器上下载，如WSL:
+2. __安装Istio__
+    * __先要准备环境__, 在操作的客户端机器上下载，如WSL:
 ```shell
 #下载Istio安装介质
 # Specify the Istio version that will be leveraged throughout these instructions
@@ -122,7 +122,7 @@ data:
 EOF
 ```
 
-* 通过yaml来安装istio <br/>
+* __通过yaml来安装istio__ <br/>
     Istio自带安装脚本，里面有几个安装模版，每个模版含不同的组件，见下图:
     ![Istio Profile](./images/IstioProfile.png) <br/>
     如果想安装demo的模版，可以通过下面命令:
@@ -139,7 +139,7 @@ istioctl manifest apply -f istio.aks.yaml --logtostderr --set installPackagePath
 安装完成如下图:
 ![Istio install done](./images/istioInstallDone.png)
 
-* 确认安装成功
+* __确认安装成功__
 ```shell
 #确认安装成功
 kubectl get svc --namespace istio-system --output wide
