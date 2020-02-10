@@ -122,7 +122,7 @@ data:
 EOF
 ```
 
-  * 通过yaml来安装istio
+* 通过yaml来安装istio <br/>
     Istio自带安装脚本，里面有几个安装模版，每个模版含不同的组件，见下图:
     ![Istio Profile](./images/IstioProfile.png) <br/>
     如果想安装demo的模版，可以通过下面命令:
@@ -139,7 +139,7 @@ istioctl manifest apply -f istio.aks.yaml --logtostderr --set installPackagePath
 安装完成如下图:
 ![Istio install done](./images/istioInstallDone.png)
 
-  * 确认安装成功
+* 确认安装成功
 ```shell
 #确认安装成功
 kubectl get svc --namespace istio-system --output wide
