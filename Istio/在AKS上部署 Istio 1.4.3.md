@@ -12,7 +12,7 @@
 * __Galley__ 负责配置的验证，导入，处理和分发，它为其他Istio组件屏蔽了底层平台(如Kubernetes)的差异。<br/>
 参考: https://istio.io/docs/ops/deployment/architecture/
 <br/>
-Istio的组件都会以pod的形式部署在k8s或AKS上，所以建议用独立的namesapce istio-system来管理，当然也会占用一定的资源。为减少与业务应用的相互影响和保证高可用，能在生产环境用独立的node pool来部署这些组件就更好。
+Istio的组件都会以pod的形式部署在k8s或AKS上，所以建议用独立的namesapce istio-system来管理，当然也会占用一定的资源。为减少与业务应用的相互影响和保证高可用，能在生产环境用独立的node pool来部署这些组件就更好。<br/>
 
 1. __创建AKS集群__ <br/>
 可以参考以下命令，需要注意的是, __Istio安装时默认Pilot Pod需要比较大的内存(2G * 2 pods)，建议不要选4G或以下的虚机。__
