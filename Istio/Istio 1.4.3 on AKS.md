@@ -144,6 +144,7 @@ istioctl manifest apply -f istio.aks.yaml --logtostderr --set installPackagePath
 #确认安装成功
 kubectl get svc --namespace istio-system --output wide
 
+#确认所有Pod都在running状态
 kubectl get pods --namespace istio-system
 
 #可以用上面创建的管理用户登录
@@ -159,5 +160,9 @@ istioctl dashboard kiali
 
 至此，安装完成。几分钟就有一个可用的Istio环境了，接下来可以把精力主要放在如何开发或运维上面。出于学习的目的，大家也可以尝试部署Istio官方例子Bookinfo App, 具体参考: https://istio.io/docs/examples/bookinfo/
 ![Bookinfo](./images/withistio.svg) <br/>
+
+例子成功部署如下图:<br/>
+![Bookinfo App](./images/bookinfo.png) <br/>
+
 希望大家都可以成为中国机长。
 
