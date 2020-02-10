@@ -130,7 +130,7 @@ EOF
 istioctl manifest apply --set profile=demo
 ```
 <br/>
-也可以创建istio安装yaml文件，来自定义安装组件，见: [istio.aks.yaml](./istio.aks.yaml) <br/>
+也可以创建istio安装yaml文件，来自定义安装组件，见: [istio.aks.yaml](https://github.com/radezheng/blog/blob/master/Istio/istio.aks.yaml) <br/>
 安装命令如下，在安装介质目录外面运行:
 
 ```shell
